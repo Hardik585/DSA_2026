@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.self;
 
 public class Majority_Element {
 	public static void main(String[] args) {
