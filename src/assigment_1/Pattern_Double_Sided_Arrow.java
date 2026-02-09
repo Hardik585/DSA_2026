@@ -13,7 +13,7 @@ public class Pattern_Double_Sided_Arrow {
 			// space
 			int i = 1;
 			while (i <= space) {
-				System.err.print("# ");
+				System.out.print("  ");
 				i++;
 			}
 

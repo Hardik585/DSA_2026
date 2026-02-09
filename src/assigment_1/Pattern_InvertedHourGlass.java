@@ -9,19 +9,23 @@ public class Pattern_InvertedHourGlass {
 			int row = 1;
 			int star =1;
 			int space = n*2 -1;
+			
 			while (row <= n * 2 + 1) {
 			    int val=n;
 			    int i=1;
+			    
 			    while(i<=star) {
 			    	System.out.print(val+"\s");
 			    	val--;
 			    	i++;
 			    }
+			   
 			    int j=1;
 			    while(j<=space) {
 			    	System.out.print("\s\s");
 			    	j++;
 			    }
+			   
 			    int k=1;
 			    if(row == n+1) {
 			    	k=2;
