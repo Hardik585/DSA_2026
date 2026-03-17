@@ -6,16 +6,18 @@ public class Ques_33 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
-		System.out.print(countWord(str));
+		System.out.print(countWord(str, 0 , 0));
 	}
 
-	public static int countWord(String str) {
-		if (str.length() == 0) {
-			return 0;
+	public static int countWord(String str, int ind, int count) {
+		if (ind == str.length()) {
+			return count;
 		}
-		int spaceInd = str.indexOf(' ');
-		int ans = countWord(str.substring(spaceInd));
-		return ans + 1;
+		if (str.charAt(ind) == ' ') {
+			count +=1 ;
+		}
+	    return countWord(str, ind + 1, count);
+		
 	}
 
 }
