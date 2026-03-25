@@ -14,23 +14,33 @@ public class A_Boolean_Matrix {
 				arr[i][j] = sc.nextInt();
 			}
 		}
-		int rn = 0;
-		for (int i = 0; i < arr.length && i < arr[rn].length; i++) {
-			if (i == rn) {
-				makeOne(arr, i, i);
+
+		int[][] ans = new int[m][n];
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				if (arr[i][j] == 1) {
+					makeOne(arr, i, i, ans);
+				}
 			}
-			rn++;
+		}
+
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(ans[i][j] + " ");
+			}
+			System.out.println();
 		}
 	}
 
-	public static void makeOne(int[][] arr, int i, int j) {
+	public static void makeOne(int[][] arr, int i, int j, int[][] ans) {
 		// making row values 1
-		for (int c = 0; c < arr[i].length; c++) {
-			arr[i][c] = 1;
+		for (int r = 0; r < arr.length; r++) {
+			ans[r][j] = 1;
 		}
 		// make col val 1
-		for (int r = 0; r < arr.length; r++) {
-			arr[r][j] = 1;
+		for (int c = 0; c < arr[i].length; c++) {
+			ans[i][c] = 1;
 		}
+
 	}
 }
